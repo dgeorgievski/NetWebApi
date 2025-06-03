@@ -14,7 +14,8 @@ on:
     - '**.csproj'
   schedule:
     - cron: '0 8 * * 4'
-
+env:
+  DOTNET_VERSION: '9.0.300' # The .NET SDK version to use  
 jobs:
   analyze:
 
@@ -31,6 +32,10 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - run: git checkout HEAD^2
       if: ${{ github.event_name == 'pull_request' }}
@@ -41,8 +46,11 @@ jobs:
       with:
         languages: ${{ matrix.language }}
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
+    # - name: Autobuild
+    #   uses: github/codeql-action/autobuild@v3
 
+    - name: Build project
+      run: dotnet build --configuration Release --no-restore
+      
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
