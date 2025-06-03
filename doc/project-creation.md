@@ -74,6 +74,7 @@ This sub-dir contains all the tests for the main Web API project.
 > dotnet add package AutoFixture
 > dotnet add package Moq
 > dotnet add package coverlet.msbuild
+> dotnet add package Microsoft.AspNetCore.Mvc.Testing
 
 # Add a reference to the Web API Project
 > dotnet add reference ../../src/NetWebApi.API/NetWebApi.API.csproj
