@@ -55,3 +55,7 @@ nunit-*.xml
 
 # Coverage reports
 tests/**/CoverageReport
+
+# mkdocs
+docs/.venv/
+

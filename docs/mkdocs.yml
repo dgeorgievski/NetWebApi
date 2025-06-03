@@ -1,0 +1,8 @@
+site_name: .Net Web API review
+nav:
+  - Home: index.md
+  - Project:
+    - Creation: project-creation.md
+    - Layout: project-layout.md
+  - Tests: tests.md
+theme: readthedocs

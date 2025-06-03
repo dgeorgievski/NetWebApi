@@ -1,6 +1,6 @@
 # Project creation
 
-This project takes the [Root-level separation (src/tests)](#) approach to project layout.
+This project takes the [Root-level separation (src/tests)](./project-layout.md#.net-project-layout) approach to project layout.
 
 ## Web API Project
 
