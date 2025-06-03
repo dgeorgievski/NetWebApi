@@ -37,8 +37,8 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - run: git checkout HEAD^2
-      if: ${{ github.event_name == 'pull_request' }}
+    # - run: git checkout HEAD^2
+    #   if: ${{ github.event_name == 'pull_request' }}
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
@@ -50,7 +50,7 @@ jobs:
     #   uses: github/codeql-action/autobuild@v3
     - name: Restore dependencies
       run: dotnet restore
-      
+
     - name: Build project
       run: dotnet build --configuration Release --no-restore
 
