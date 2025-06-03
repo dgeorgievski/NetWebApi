@@ -1,8 +1,8 @@
 namespace NetWebAPI.API.Services
 {
-    using NetWebAPI.API.Models;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using NetWebAPI.API.Models;
 
     public interface IProductService
     {
@@ -15,7 +15,7 @@ namespace NetWebAPI.API.Services
 
     public class ProductService : IProductService
     {
-        private List<Product> _products = [];
+        private readonly List<Product> _products = [];
 
         public Task<Product?> GetProductByIdAsync(int id)
         {

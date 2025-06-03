@@ -29,9 +29,14 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
+    - name: Check formatting
+      run: |
+        dotnet tool restore
+        dotnet csharpier check .
+
     - name: Install dependencies
       run: dotnet restore
-      
+    
     - name: Build
       run: dotnet build --configuration Release --no-restore
     

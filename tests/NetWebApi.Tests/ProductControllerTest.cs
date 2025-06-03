@@ -1,13 +1,12 @@
 ﻿namespace NetWebApi.Tests
 {
-    using Xunit;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Mvc;
     using Moq;
     using NetWebAPI.API.Controllers;
     using NetWebAPI.API.Models;
     using NetWebAPI.API.Services;
-    using Microsoft.AspNetCore.Mvc;
-
-    using System.Threading.Tasks;
+    using Xunit;
 
     public class ProductControllerTests
     {
@@ -43,8 +42,18 @@
             // Arrange
             var expectedProducts = new List<Product>
             {
-                new() { Id = 1, Name = "Product A", Price = 10.99M },
-                new() { Id = 2, Name = "Product B", Price = 15.99M }
+                new()
+                {
+                    Id = 1,
+                    Name = "Product A",
+                    Price = 10.99M,
+                },
+                new()
+                {
+                    Id = 2,
+                    Name = "Product B",
+                    Price = 15.99M,
+                },
             };
 
             _mockService.Setup(s => s.GetAllProductsAsync()).ReturnsAsync(expectedProducts);
@@ -64,8 +73,15 @@
         public async Task AddProduct_ReturnsCreatedAtActionResult_WithNewProduct()
         {
             // Arrange
-            var newProduct = new Product { Id = 3, Name = "New Product", Price = 20.99M };
-            _mockService.Setup(s => s.AddProductAsync(It.IsAny<Product>())).ReturnsAsync(newProduct);
+            var newProduct = new Product
+            {
+                Id = 3,
+                Name = "New Product",
+                Price = 20.99M,
+            };
+            _mockService
+                .Setup(s => s.AddProductAsync(It.IsAny<Product>()))
+                .ReturnsAsync(newProduct);
 
             // Act
             var result = await _controller.AddProduct(newProduct);
@@ -104,6 +120,5 @@
             // Assert
             Assert.IsType<NotFoundResult>(result);
         }
-
     }
 }
