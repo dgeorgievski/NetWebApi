@@ -30,7 +30,7 @@ jobs:
           git config --local user.name "Git User"
       - name: Versionize Release
         id: versionize
-        run: versionize --exit-insignificant-commits
+        run: versionize --exit-insignificant-commits --skip-changelog
         continue-on-error: true
       - name: No release required
         if: steps.versionize.outcome != 'success'
@@ -42,18 +42,32 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
           tags: true
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
-          repo: ${{ github.repository }}
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body_path: ${{ github.workspace }}/CHANGELOG.md
-          draft: false
-          prerelease: false
+          go-version: '^1.24'
+
+      - name: Run GoReleaser
+        uses: go-semantic-release/action@v1
+        with:
+          # hooks: goreleaser
+          changelog-generator-opt: "emojis=true"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Create Release
+      #   id: create_release
+      #   uses: ncipollo/release-action@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      #   with:
+      #     repo: ${{ github.repository }}
+      #     tag: ${{ github.ref }}
+      #     name: ${{ github.ref }}
+      #     bodyFile: ${{ github.workspace }}/CHANGELOG.md
+      #     draft: false
+      #     prerelease: false
 
       # - name: 'Create release'
       #   if: steps.versionize.outcome == 'success'
