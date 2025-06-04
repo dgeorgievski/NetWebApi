@@ -7,13 +7,13 @@ on:
   #   paths:
   #   - '**.cs'
   #   - '**.csproj'
-  pull_request:
-    branches: [main]
-    paths:
-    - '**.cs'
-    - '**.csproj'
-  schedule:
-    - cron: '0 8 * * 4'
+  # pull_request:
+  #   branches: [main]
+  #   paths:
+  #   - '**.cs'
+  #   - '**.csproj'
+  # schedule:
+  #   - cron: '0 8 * * 4'
 env:
   DOTNET_VERSION: '9.0.300' # The .NET SDK version to use  
 jobs:

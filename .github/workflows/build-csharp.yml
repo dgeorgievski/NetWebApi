@@ -1,0 +1,70 @@
+name: build
+
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Programming language of the application'
+        required: true
+        default: 'csharp'
+        type: string
+      app-name:
+        description: 'Name of the application to package'
+        default: 'netwebapi'
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      language:
+        required: true
+        type: string
+      app-name:
+        required: true
+        type: string
+  # push:  
+  # pull_request:
+  #   branches: [ main ]
+  #   paths:
+  #   - '**.cs'
+  #   - '**.csproj'
+
+env:
+  AZURE_WEBAPP_NAME: netwebapi    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '9.0.300' # The .NET SDK version to use  
+
+jobs:
+  build-csharp:
+    if: ${{ inputs.language == 'csharp' }}
+    name: build-${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        # os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install dependencies
+      run: dotnet restore
+    
+    - name: dotnet build ${{ inputs.app-name }}
+      run: |
+        dotnet build --configuration Release --no-restore
+    
+    - name: dotnet publish
+      run: |
+        dotnet publish -c \
+          Release -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/${{ env.AZURE_WEBAPP_NAME }}
+
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.AZURE_WEBAPP_NAME }}
+        path: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/${{ env.AZURE_WEBAPP_NAME }}
+    

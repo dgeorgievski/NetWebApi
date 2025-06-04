@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <Version>0.1.0</Version>
-  </PropertyGroup>
-  <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>Acme.08.28.22.001.Test</PackageId>
+    <Version>0.1.0</Version>
+    <Authors></Authors>
+    <Company>Acme</Company>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />

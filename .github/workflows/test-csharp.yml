@@ -1,21 +1,23 @@
 name: Build, lint and test
 
 on:
-  # push:  
   workflow_dispatch:
-  # pull_request:
-  #   branches: [ main ]
-  #   paths:
-  #   - '**.cs'
-  #   - '**.csproj'
+  workflow_call:
+    inputs:
+      language:
+        required: true
+        type: string
+      app-name:
+        required: true
+        type: string
 
 env:
   DOTNET_VERSION: '9.0.300' # The .NET SDK version to use  
 
 jobs:
   build-and-test:
-
-    name: build-and-test-${{matrix.os}}
+    if: ${{ inputs.language == 'csharp' }}
+    name: test-csharp-${{matrix.os}}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -28,11 +30,6 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
-
-    - name: Check formatting
-      run: |
-        dotnet tool restore
-        dotnet csharpier check .
 
     - name: Install dependencies
       run: dotnet restore

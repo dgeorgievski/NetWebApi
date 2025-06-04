@@ -1,0 +1,17 @@
+name: build
+
+on:
+  workflow_dispatch:
+    inputs:
+      app-name:
+        description: 'Name of the application to package'
+        default: 'netwebapi'
+        required: true
+        type: string
+      
+jobs:
+  lint: 
+    uses: dgeorgievski/platform-github-actions/.github/workflows/lint-csharp.yml@v1
+    with:
+      language: csharp
+      app-name: ${{ inputs.app-name }}
