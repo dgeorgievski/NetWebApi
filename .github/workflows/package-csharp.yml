@@ -1,4 +1,4 @@
-name: Package C# Application
+name: package-csharp
 on:
   workflow_dispatch:
     inputs:

@@ -1,4 +1,4 @@
-name: Build, lint and test
+name: test-csharp
 
 on:
   workflow_dispatch:
