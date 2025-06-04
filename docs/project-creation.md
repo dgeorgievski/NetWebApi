@@ -54,6 +54,23 @@ This sub-dir contains all the code for the project.
         └── launchSettings.json
 ```
 
+Add common NuGet packages.
+
+```sh
+# structured logging
+> dotnet add package Serilog --version 4.3.0
+
+# sinks for serilog
+> dotnet add package Serilog.Sinks.Console
+> dotnet add package Serilog.Sinks.File
+> dotnet add package Serilog.Settings.Configuration 
+# extension for reading JSON config files
+> dotnet add package Microsoft.Extensions.Configuration.Json --version 9.0.5
+
+# JSON processing
+> dotnet add package Newtonsoft.Json --version 13.0.3
+```
+
 ## Tests for Web API Project
 
 This sub-dir contains all the tests for the main Web API project.

@@ -1,3 +1,18 @@
+// using Serilog;
+// TODO resolve Serilog configuration issues
+// var configuration = new ConfigurationBuilder()
+//     .SetBasePath(Directory.GetCurrentDirectory())
+//     .AddJsonFile("appsettings.json")
+//     .AddJsonFile(
+//         $"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json",
+//         true
+//     )
+//     .Build();
+
+// var logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
+
+// logger.Information("logger configured successfully");
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+// logger.Information("app built successfully");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -45,6 +61,7 @@ app.MapGet(
     )
     .WithName("GetWeatherForecast");
 
+// logger.Information("starting app");
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
