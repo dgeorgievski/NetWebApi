@@ -3,6 +3,8 @@ name: Version and release
 on:
   workflow_dispatch:
 
+env:
+  DOTNET_VERSION: '9.0.300' # The .NET SDK version to use  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +16,8 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
