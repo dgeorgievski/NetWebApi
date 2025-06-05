@@ -29,14 +29,14 @@ jobs:
 
   build:
     needs: test
-    uses: dgeorgievski/my-github-actions/.github/workflows/build-${{ inputs.language }}.yml@v6
+    uses: "dgeorgievski/my-github-actions/.github/workflows/build-${{ inputs.language }}.yml@v6"
     with:
       language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
 
   package:
     needs: build
-    uses: dgeorgievski/my-github-actions/.github/workflows/package-${{ inputs.language }}.yml@v6
+    uses: "dgeorgievski/my-github-actions/.github/workflows/package-${{ inputs.language }}.yml@v6"
     with:
       context: src/NetWebApi.API
       dockerFile: src/NetWebApi.API/Dockerfile
