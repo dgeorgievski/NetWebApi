@@ -13,20 +13,20 @@ env:
   LANGUAGE: 'csharp'
 jobs:
   lint: 
-    uses: dgeorgievski/my-github-actions/.github/workflows/lint-csharp.yml@v3
+    uses: dgeorgievski/my-github-actions/.github/workflows/lint-csharp.yml@v4
     with:
       language: csharp
       app-name: ${{ inputs.app-name }}
   test:
     needs: lint
-    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v3
+    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v4
     with:
       language: csharp
       app-name: ${{ inputs.app-name }}
 
   build:
     needs: test
-    uses: dgeorgievski/my-github-actions/.github/workflows/build-csharp.yml@v3
+    uses: dgeorgievski/my-github-actions/.github/workflows/build-csharp.yml@v4
     with:
       language: csharp
       app-name: ${{ inputs.app-name }}
