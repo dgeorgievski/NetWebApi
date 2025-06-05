@@ -16,13 +16,13 @@ on:
 
 jobs:
   lint: 
-    uses: dgeorgievski/my-github-actions/.github/workflows/lint-${{ inputs.language }}.yml@v4
+    uses: "dgeorgievski/my-github-actions/.github/workflows/lint-${{ inputs.language }}.yml@v4"
     with:
       language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
   test:
     needs: lint
-    uses: dgeorgievski/my-github-actions/.github/workflows/test-${{ inputs.language }}.yml@v4
+    uses: "dgeorgievski/my-github-actions/.github/workflows/test-${{ inputs.language }}.yml@v4"
     with:
       language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
