@@ -31,3 +31,10 @@ jobs:
       language: csharp
       app-name: ${{ inputs.app-name }}
 
+  package:
+    needs: build
+    uses: dgeorgievski/my-github-actions/.github/workflows/package-csharp.yml@v1
+    with:
+      language: csharp
+      app-name: ${{ inputs.app-name }}
+
