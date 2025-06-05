@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.7.0"></a>
+## [0.7.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.7.0) (2025-06-05)
+
+### Features
+
+* **ci:** security job updated to v14 ([6e1c3a4](https://www.github.com/dgeorgievski/NetWebApi/commit/6e1c3a44c0bf2462f0e0e99ac1627d2c07ae11cb))
+
 <a name="0.6.0"></a>
 ## [0.6.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.6.0) (2025-06-05)
 
