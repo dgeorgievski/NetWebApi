@@ -36,7 +36,7 @@ jobs:
 
   package:
     needs: build
-    uses: dgeorgievski/my-github-actions/.github/workflows/package-csharp.yml@v6
+    uses: dgeorgievski/my-github-actions/.github/workflows/package-csharp.yml@v8
     with:
       context: src/NetWebApi.API
       dockerFile: src/NetWebApi.API/Dockerfile
