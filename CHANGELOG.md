@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.6.0"></a>
+## [0.6.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.6.0) (2025-06-05)
+
+### Features
+
+* **sec:** refactored scan job ([63faeeb](https://www.github.com/dgeorgievski/NetWebApi/commit/63faeeb7998a622134d7d68bfc8f3d53a8e2d910))
+
 <a name="0.5.0"></a>
 ## [0.5.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.5.0) (2025-06-05)
 
