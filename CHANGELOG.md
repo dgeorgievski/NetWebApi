@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.3.1) (2025-06-05)
+
+### Bug Fixes
+
+* **ci:** using v8 for package step ([aa20819](https://www.github.com/dgeorgievski/NetWebApi/commit/aa2081947a948ea5d41ca8f76ce28dee30412afd))
+
 <a name="0.3.0"></a>
 ## [0.3.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.3.0) (2025-06-05)
 
