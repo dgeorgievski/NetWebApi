@@ -47,10 +47,10 @@ jobs:
 
   security:
     needs: [build, package]
-    uses: dgeorgievski/my-github-actions/.github/workflows/security-scan.yml@v13
+    uses: dgeorgievski/my-github-actions/.github/workflows/security-scan.yml@v14
     with:
       registry: ghcr.io
-      image-name: ${{ github.event.repository.name }}/${{ inputs.app-name }}
+      image-name: dgeorgievski/${{ inputs.app-name }}
       image-tag: ${{ needs.build.outputs.app_version }}
       dockerfile: src/NetWebApi.API/Dockerfile
     
