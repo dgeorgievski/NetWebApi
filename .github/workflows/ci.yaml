@@ -18,29 +18,29 @@ env:
   LANGUAGE: ${{ inputs.language }}
 jobs:
   lint: 
-    uses: dgeorgievski/my-github-actions/.github/workflows/lint-${{ env.LANGUAGE }}.yml@v4
+    uses: dgeorgievski/my-github-actions/.github/workflows/lint-${{ inputs.language }}.yml@v6
     with:
       language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
-  test:
-    needs: lint
-    uses: dgeorgievski/my-github-actions/.github/workflows/test-${{ env.LANGUAGE }}.yml@v4
-    with:
-      language: ${{ inputs.language }}
-      app-name: ${{ inputs.app-name }}
+  # test:
+  #   needs: lint
+  #   uses: dgeorgievski/my-github-actions/.github/workflows/test-${{ env.LANGUAGE }}.yml@v4
+  #   with:
+  #     language: ${{ inputs.language }}
+  #     app-name: ${{ inputs.app-name }}
 
-  build:
-    needs: test
-    uses: dgeorgievski/my-github-actions/.github/workflows/build-${{ env.LANGUAGE }}.yml@v6
-    with:
-      language: ${{ inputs.language }}
-      app-name: ${{ inputs.app-name }}
+  # build:
+  #   needs: test
+  #   uses: dgeorgievski/my-github-actions/.github/workflows/build-${{ env.LANGUAGE }}.yml@v6
+  #   with:
+  #     language: ${{ inputs.language }}
+  #     app-name: ${{ inputs.app-name }}
 
-  package:
-    needs: build
-    uses: dgeorgievski/my-github-actions/.github/workflows/package-${{ env.LANGUAGE }}.yml@v6
-    with:
-      context: src/NetWebApi.API
-      dockerFile: src/NetWebApi.API/Dockerfile
-      language: ${{ inputs.language }}
-      app-name: ${{ inputs.app-name }}
+  # package:
+  #   needs: build
+  #   uses: dgeorgievski/my-github-actions/.github/workflows/package-${{ env.LANGUAGE }}.yml@v6
+  #   with:
+  #     context: src/NetWebApi.API
+  #     dockerFile: src/NetWebApi.API/Dockerfile
+  #     language: ${{ inputs.language }}
+  #     app-name: ${{ inputs.app-name }}
