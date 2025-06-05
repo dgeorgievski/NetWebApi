@@ -35,6 +35,7 @@ jobs:
     needs: build
     uses: dgeorgievski/my-github-actions/.github/workflows/package-csharp.yml@v3
     with:
+      context: src/NetWebApi.API
+      dockerFile: ./Dockerfile
       language: csharp
       app-name: ${{ inputs.app-name }}
-      context: src/NetWebApi.API
