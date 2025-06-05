@@ -22,7 +22,7 @@ jobs:
       app-name: ${{ inputs.app-name }}
   test:
     needs: lint
-    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v13
+    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v15
     with:
       language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
