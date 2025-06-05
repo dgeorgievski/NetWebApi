@@ -10,7 +10,7 @@ on:
         type: string
       
 env:
-  LANGUAGE: csharp
+  LANGUAGE: 'csharp'
 jobs:
   lint: 
     uses: dgeorgievski/my-github-actions/.github/workflows/lint-csharp.yml@v1
