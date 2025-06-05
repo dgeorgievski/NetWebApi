@@ -43,3 +43,4 @@ jobs:
       context: src/NetWebApi.API
       dockerFile: src/NetWebApi.API/Dockerfile
       imageTag: ${{ needs.build.outputs.app_version }}
+      push: true
