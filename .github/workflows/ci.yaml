@@ -9,9 +9,25 @@ on:
         required: true
         type: string
       
+env:
+  LANGUAGE: csharp
 jobs:
   lint: 
     uses: dgeorgievski/platform-github-actions/.github/workflows/lint-csharp.yml@v1
     with:
-      language: csharp
+      language: ${ env.LANGUAGE }
       app-name: ${{ inputs.app-name }}
+  test:
+    needs: lint
+    uses: dgeorgievski/platform-github-actions/.github/workflows/test-csharp.yml@v1
+    with:
+      language: ${ env.LANGUAGE }
+      app-name: ${{ inputs.app-name }}
+
+  build:
+    needs: test
+    uses: dgeorgievski/platform-github-actions/.github/workflows/build-csharp.yml@v1
+    with:
+      language: ${ env.LANGUAGE }
+      app-name: ${{ inputs.app-name }}
+
