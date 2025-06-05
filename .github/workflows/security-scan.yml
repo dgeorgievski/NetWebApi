@@ -4,18 +4,19 @@ on:
   workflow_dispatch:
   workflow_call:
     inputs:
+      registry:
+        description: 'Container registry. Example: ghcr.io'
+        required: true
+        type: string
       image-name:
         required: true
         type: string
       image-tag:
+        default: 'latest'
+        description: 'Docker image tag'
         required: true
         type: string
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ inputs.image-name || github.repository }}  
-  IMAGE_TAG: ${{ inputs.image-tag || 'latest' }}      
-  
 jobs:
   scan_docker_image:
     permissions:
@@ -30,7 +31,7 @@ jobs:
       - name: Log in to the Container registry 📦
         uses: docker/login-action@v2
         with:
-          registry: ${{ env.REGISTRY }}
+          registry: ${{ inputs.registry }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -38,7 +39,7 @@ jobs:
         uses: snyk/actions/docker@master
         continue-on-error: true
         with:
-          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          image: ${{ inputs.registry }}/${{ inputs.image-name }}:${{ inputs }}
           args: --file=Dockerfile --severity-threshold=high --sarif-file-output=snyk.sarif
         env:
           SNYK_TOKEN: ${{ secrets.GITHUB_TOKEN }}

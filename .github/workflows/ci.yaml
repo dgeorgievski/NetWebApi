@@ -44,3 +44,12 @@ jobs:
       dockerFile: src/NetWebApi.API/Dockerfile
       imageTag: ${{ needs.build.outputs.app_version }}
       push: true
+
+  security:
+    needs: [build, package]
+    uses: dgeorgievski/my-github-actions/.github/workflows/security-scan.yml@v12
+    with:
+      registry: ghcr.io
+      image-name: ${{ github.event.repository.name }}/${{ inputs.app-name }}
+      image-tag: ${{ needs.build.outputs.app_version }}
+    
