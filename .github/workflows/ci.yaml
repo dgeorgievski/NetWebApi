@@ -3,39 +3,42 @@ name: CI
 on:
   workflow_dispatch:
     inputs:
+      language:
+        description: 'Programming language'
+        required: true
+        default: 'csharp'
+        type: string
       app-name:
-        description: 'Name of the application to package'
+        description: 'Application name'
         default: 'netwebapi'
         required: true
         type: string
-      
-env:
-  LANGUAGE: 'csharp'
+
 jobs:
   lint: 
-    uses: dgeorgievski/my-github-actions/.github/workflows/lint-csharp.yml@v4
+    uses: dgeorgievski/my-github-actions/.github/workflows/lint-${{ inputs.language }}.yml@v4
     with:
-      language: csharp
+      language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
   test:
     needs: lint
-    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v4
+    uses: dgeorgievski/my-github-actions/.github/workflows/test-${{ inputs.language }}.yml@v4
     with:
-      language: csharp
+      language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
 
   build:
     needs: test
-    uses: dgeorgievski/my-github-actions/.github/workflows/build-csharp.yml@v4
+    uses: dgeorgievski/my-github-actions/.github/workflows/build-${{ inputs.language }}.yml@v6
     with:
-      language: csharp
+      language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
 
   package:
     needs: build
-    uses: dgeorgievski/my-github-actions/.github/workflows/package-csharp.yml@v5
+    uses: dgeorgievski/my-github-actions/.github/workflows/package-${{ inputs.language }}.yml@v6
     with:
       context: src/NetWebApi.API
       dockerFile: src/NetWebApi.API/Dockerfile
-      language: csharp
+      language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
