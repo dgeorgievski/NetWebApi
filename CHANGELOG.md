@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.4.2"></a>
+## [0.4.2](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.4.2) (2025-06-05)
+
+### Bug Fixes
+
+* **csharp:** package updated to v11 ([a636c79](https://www.github.com/dgeorgievski/NetWebApi/commit/a636c794e7f36be7cea3759fa7e3b3d1e74f7f41))
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.4.1) (2025-06-05)
 
