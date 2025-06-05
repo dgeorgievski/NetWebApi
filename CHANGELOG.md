@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.3.0"></a>
+## [0.3.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.3.0) (2025-06-05)
+
+### Features
+
+* **ci:** updatinv build-scahp WF to v7 ([46ac7c7](https://www.github.com/dgeorgievski/NetWebApi/commit/46ac7c742a3c1ff9c295a6e8952d074001258a10))
+* **ci:** Upgraded ci package action to v5 ([f5950b4](https://www.github.com/dgeorgievski/NetWebApi/commit/f5950b44ffa166fa0a57b8249f700bba5b1cadf7))
+
+### Bug Fixes
+
+* **ci:** corrected build action version to v4 ([8d59686](https://www.github.com/dgeorgievski/NetWebApi/commit/8d59686baf54b52065beb69ba8b49115888d4716))
+* **ci:** Corrected the docker file relative path ([80e108d](https://www.github.com/dgeorgievski/NetWebApi/commit/80e108da560eac9b2efc84d6828c8fae9917181b))
+* **ci:** debugging release step ([6980b0d](https://www.github.com/dgeorgievski/NetWebApi/commit/6980b0d8f19382ccbe73c2e4665fd71ad8e2a7b5))
+* **ci:** made lang input param in build WF ([5873c58](https://www.github.com/dgeorgievski/NetWebApi/commit/5873c58f6e459b0f80b4093dcd8560fdc27ed9ef))
+* **ci:** quoted params in paths of remaining WF refs ([523956d](https://www.github.com/dgeorgievski/NetWebApi/commit/523956d1f78d3013060034da9f30509658b2d44e))
+* **ci:** quoted params in paths of WF ([12ffb08](https://www.github.com/dgeorgievski/NetWebApi/commit/12ffb08e1bfd853cb3c6ed0af0d23674832c7e94))
+* **ci:** removed context expressions from uses vals ([c3a3e5a](https://www.github.com/dgeorgievski/NetWebApi/commit/c3a3e5a8a40007f6cb43eb45a271936cebd9c21c))
+* **ci:** using env var to dynamically create refs in ci WF ([640ed1f](https://www.github.com/dgeorgievski/NetWebApi/commit/640ed1f2959bd18298bd28bf59dcba211daa9b63))
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.2.0) (2025-06-05)
 
