@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.4.3"></a>
+## [0.4.3](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.4.3) (2025-06-05)
+
+### Bug Fixes
+
+* **ci:** set push image flag to true ([0f36c57](https://www.github.com/dgeorgievski/NetWebApi/commit/0f36c578a4466c86e348cd5d9ac01174f8c27c0a))
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.4.2) (2025-06-05)
 
