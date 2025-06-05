@@ -15,7 +15,7 @@ jobs:
   lint: 
     uses: dgeorgievski/my-github-actions/.github/workflows/lint-csharp.yml@v1
     with:
-      language: ${ env.LANGUAGE }
+      language: csharp
       app-name: ${{ inputs.app-name }}
   test:
     needs: lint
