@@ -22,7 +22,7 @@ jobs:
       app-name: ${{ inputs.app-name }}
   test:
     needs: lint
-    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v6
+    uses: dgeorgievski/my-github-actions/.github/workflows/test-csharp.yml@v13
     with:
       language: ${{ inputs.language }}
       app-name: ${{ inputs.app-name }}
@@ -47,9 +47,10 @@ jobs:
 
   security:
     needs: [build, package]
-    uses: dgeorgievski/my-github-actions/.github/workflows/security-scan.yml@v12
+    uses: dgeorgievski/my-github-actions/.github/workflows/security-scan.yml@v13
     with:
       registry: ghcr.io
       image-name: ${{ github.event.repository.name }}/${{ inputs.app-name }}
       image-tag: ${{ needs.build.outputs.app_version }}
+      dockerfile: src/NetWebApi.API/Dockerfile
     
