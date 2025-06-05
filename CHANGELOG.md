@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
 <a name="0.1.0"></a>
+## [0.1.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.1.0) (2025-06-05)
+
+### Features
+
+* **ci:** Changed ci workflow name ([223ef85](https://www.github.com/dgeorgievski/NetWebApi/commit/223ef850cac388b77477c0aa9a110ef2775d90c9))
+
+<a name="0.1.0"></a>
 ## [0.1.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v0.1.0) (2025-06-04)
 
 ### Features
