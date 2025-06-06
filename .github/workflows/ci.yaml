@@ -56,8 +56,9 @@ jobs:
 
   deploy:
     needs: security
-    uses: dgeorgievski/my-github-actions/.github/workflows/deploy-csharp-az-app-service.yml@v18
+    uses: dgeorgievski/my-github-actions/.github/workflows/deploy-csharp-az-app-service.yml@v19
     with:
       azure_webapp_name: ${{ inputs.app-name }}
       azure_webapp_package_path: '.'
+      azure_webapp_publish_profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }}
     
