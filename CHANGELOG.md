@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.1.0"></a>
+## [1.1.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.1.0) (2025-06-06)
+
+### Features
+
+* **ci:** deploy updated to v18 ([1e3e0fc](https://www.github.com/dgeorgievski/NetWebApi/commit/1e3e0fcc5e903089d896b0a56fa179eb5bb0e63f))
+
 <a name="1.0.0"></a>
 ## [1.0.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.0.0) (2025-06-06)
 
