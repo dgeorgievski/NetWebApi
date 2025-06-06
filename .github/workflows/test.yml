@@ -1,0 +1,23 @@
+name: Test Composite Actions
+
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Programming language'
+        required: true
+        default: 'csharp'
+        type: string
+      app-name:
+        description: 'Application name'
+        default: 'netwebapi'
+        required: true
+        type: string
+    
+    
+jobs:
+  test:
+    uses: dgeorgievski/my-github-actions/.github/workflows/dev-csharp.yaml@composites
+    with:
+      app-name: ${{ inputs.app-name }}
+      language: ${{ inputs.language }}
