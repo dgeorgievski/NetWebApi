@@ -56,9 +56,9 @@ jobs:
 
   deploy:
     needs: security
-    uses: dgeorgievski/my-github-actions/.github/workflows/deploy-csharp-az-app-service.yml@v20
+    uses: dgeorgievski/my-github-actions/.github/workflows/deploy-csharp-az-app-service.yml@v21
     with:
       azure_webapp_name: ${{ inputs.app-name }}
-      azure_webapp_package_path: '.'
+      azure_webapp_package_path: 'src/NetWebApi.API'
     secrets: inherit
     
