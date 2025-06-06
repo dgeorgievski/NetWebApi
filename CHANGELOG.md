@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.2.0"></a>
+## [1.2.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.2.0) (2025-06-06)
+
+### Features
+
+* **ci:** enabled deploy job to inherit secrets ([4f99442](https://www.github.com/dgeorgievski/NetWebApi/commit/4f994427101547a2022d2495ad59d5c0f39f60ec))
+
+### Bug Fixes
+
+* **ci:** passing secret as var to deploy job ([b67c4cb](https://www.github.com/dgeorgievski/NetWebApi/commit/b67c4cb60b7e800401a5a9b2bc1ca185c79f26fc))
+
 <a name="1.1.0"></a>
 ## [1.1.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.1.0) (2025-06-06)
 
