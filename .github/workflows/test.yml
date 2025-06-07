@@ -13,6 +13,24 @@ on:
         default: 'netwebapi'
         required: true
         type: string
+      dotnet-version:
+        description: 'Dotnet version'
+        required: false
+        type: string
+        default: '9.0.300'
+      dotnet-tools-restore:
+        description: 'Restore project package, or install it globbally.'
+        required: false
+        type: boolean
+        default: true
+      dotnet-linter:
+        description: 'Dotnet linter to use. csharpier | roslynator'
+        required: false
+        type: choice
+        options:
+          - csharpier
+          - roslynator
+        default: 'csharpier'
     
     
 jobs:
@@ -21,3 +39,6 @@ jobs:
     with:
       app-name: ${{ inputs.app-name }}
       language: ${{ inputs.language }}
+      dotnet-version: ${{ inputs.dotnet-version }}
+      dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
+      dotnet-linter: ${{ inputs.dotnet-linter }}
