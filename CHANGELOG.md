@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.4.0"></a>
+## [1.4.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.4.0) (2025-06-09)
+
+### Features
+
+* **test:** Refactoed input params ([8b48ef1](https://www.github.com/dgeorgievski/NetWebApi/commit/8b48ef1b6f45b148339c2dcfbc86f2fc9bad966c))
+* **test:** Testing whole pipeline ([65cd7af](https://www.github.com/dgeorgievski/NetWebApi/commit/65cd7af23375d4f7c39c4cf0100ac85d7908982e))
+
 <a name="1.3.0"></a>
 ## [1.3.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.3.0) (2025-06-09)
 
