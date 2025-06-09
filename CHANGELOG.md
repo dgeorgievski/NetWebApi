@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.3.0"></a>
+## [1.3.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.3.0) (2025-06-09)
+
+### Features
+
+* **ci:** Added more inputs to test linters ([56b0fed](https://www.github.com/dgeorgievski/NetWebApi/commit/56b0fed8c1394672dd8d78865179a267dc8dc2d4))
+
+### Bug Fixes
+
+* **test:** enable secrets inherit in test pipeline ([48426e1](https://www.github.com/dgeorgievski/NetWebApi/commit/48426e108c37f2ee768e187efd7311dd4ee3324c))
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.2.1) (2025-06-06)
 
