@@ -41,5 +41,6 @@ jobs:
       language: ${{ inputs.language }}
       dotnet-version: ${{ inputs.dotnet-version }}
       dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
-      dotnet-linter: ${{ inputs.dotnet-linter }}
+      dotnet-linter-csharpier: true
+      dotnet-linter-roslynator: false
     secrets: inherit
