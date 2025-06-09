@@ -19,7 +19,7 @@ on:
         type: string
         default: '9.0.300'
       dotnet-tools-restore:
-        description: 'Restore project package, or install it globbally.'
+        description: 'Restore tools. If unchecked, install tools globally.'
         required: false
         type: boolean
         default: true
