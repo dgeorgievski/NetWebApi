@@ -23,16 +23,17 @@ on:
         required: false
         type: boolean
         default: true
-      dotnet-linter:
-        description: 'Dotnet linter to use. csharpier | roslynator'
+      dotnet-linter-csharpier:
+        description: 'Lint with csharpier'
         required: false
-        type: choice
-        options:
-          - csharpier
-          - roslynator
-        default: 'csharpier'
-    
-    
+        type: boolean
+        default: true
+      dotnet-linter-roslynator:
+        description: 'Lint with roslynator'
+        required: false
+        type: boolean
+        default: false
+        
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/dev-csharp.yaml@composites
@@ -43,4 +44,5 @@ jobs:
       dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
       dotnet-linter-csharpier: true
       dotnet-linter-roslynator: false
+      azure_webapp_package_path: 'src/NetWebApi.API'
     secrets: inherit
