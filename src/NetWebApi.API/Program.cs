@@ -6,6 +6,9 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Enable routing and map controller endpoints using top-level registration
+app.MapControllers(); // Maps attribute-defined routes in controllers
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

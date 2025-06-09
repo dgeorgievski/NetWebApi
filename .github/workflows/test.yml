@@ -42,3 +42,4 @@ jobs:
       dotnet-version: ${{ inputs.dotnet-version }}
       dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
       dotnet-linter: ${{ inputs.dotnet-linter }}
+    secrets: inherit
