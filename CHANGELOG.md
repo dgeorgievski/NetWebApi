@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.5.0"></a>
+## [1.5.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.5.0) (2025-06-09)
+
+### Features
+
+* **ci:** Aded readme page for WF ([706154c](https://www.github.com/dgeorgievski/NetWebApi/commit/706154cde145c3351fa635421afc37c609426464))
+
 <a name="1.4.0"></a>
 ## [1.4.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.4.0) (2025-06-09)
 
