@@ -44,4 +44,6 @@ jobs:
       dotnet-linter-csharpier: true
       dotnet-linter-roslynator: false
       azure_webapp_package_path: 'src/NetWebApi.API'
+      security-trivy: true
+      security-snyk: false
     secrets: inherit
