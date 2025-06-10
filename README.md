@@ -11,3 +11,14 @@ A test .Net web api project to review best practices for:
 - Testing
 - Documentation
 
+## Build
+
+### Docker 
+
+TODO
+
+## Deployment
+
+### Azure Web Services
+
+TODO
