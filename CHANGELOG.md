@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.7.0"></a>
+## [1.7.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.7.0) (2025-06-10)
+
+### Features
+
+* **ci:** Added Trivy scan ([928adfa](https://www.github.com/dgeorgievski/NetWebApi/commit/928adfa923ab43681ae2225b2b3dcef255c04691))
+
 <a name="1.6.0"></a>
 ## [1.6.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.6.0) (2025-06-10)
 
