@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.6.0"></a>
+## [1.6.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.6.0) (2025-06-10)
+
+### Features
+
+* **doc:** Added build and deployment sections ([58b69f1](https://www.github.com/dgeorgievski/NetWebApi/commit/58b69f1d56fa35458bd369f3d6e55f4f68c9ce74))
+
+### Bug Fixes
+
+* **app:** corrected issue with managing controllers in app config ([da781e2](https://www.github.com/dgeorgievski/NetWebApi/commit/da781e2b464f32e3002b66fdb074c4e2c53560a7))
+* **lint:** Corrected csharpier errors ([42ba000](https://www.github.com/dgeorgievski/NetWebApi/commit/42ba000115aaafcf1f1d2bbbfe02decef81f07a8))
+
 <a name="1.5.0"></a>
 ## [1.5.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.5.0) (2025-06-09)
 
