@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.7.1"></a>
+## [1.7.1](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.7.1) (2025-06-10)
+
+### Bug Fixes
+
+* **ci:** test 1 ([9796e24](https://www.github.com/dgeorgievski/NetWebApi/commit/9796e24c113e4a43355f8d78c0864fd6c39467f8))
+* **ci:** test 2 ([e1fa43f](https://www.github.com/dgeorgievski/NetWebApi/commit/e1fa43fae4bc4295d261667764ed7444382f7990))
+
 <a name="1.7.0"></a>
 ## [1.7.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.7.0) (2025-06-10)
 
