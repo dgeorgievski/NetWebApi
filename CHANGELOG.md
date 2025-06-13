@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.8.0"></a>
+## [1.8.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.8.0) (2025-06-12)
+
+### Features
+
+* **cd:** Using helm chart for deployment ([1ba7a1e](https://www.github.com/dgeorgievski/NetWebApi/commit/1ba7a1e8533d9cfa50dadb3e889f236bbde3527d))
+* **helm:** Added helm chart for k8s deployment ([577e92a](https://www.github.com/dgeorgievski/NetWebApi/commit/577e92acd8ab02e742b53b48c581824aad687604))
+
 <a name="1.7.1"></a>
 ## [1.7.1](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.7.1) (2025-06-10)
 
