@@ -1,0 +1,34 @@
+name: Test Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      app-name:
+        description: 'Application name'
+        default: 'netwebapi'
+        required: true
+        type: string
+      app-version:
+        description: 'App version'
+        required: true
+        type: string
+      registry:
+        description: 'Container registry'
+        required: false
+        type: string
+        default: 'ghcr.io'
+      chart:
+        description: 'Chart name'
+        required: false
+        type: string
+        default: 'app'
+jobs:
+  test:
+    uses: dgeorgievski/my-github-actions/.github/workflows/test.yaml@composites
+    with:
+      app-name: ${{ inputs.app-name }}
+      app-version: ${{ inputs.app-version }}
+      registry: ${{ inputs.registry }}
+      chart: ${{ inputs.chart }}
+      
+    secrets: inherit
