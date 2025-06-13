@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.9.0"></a>
+## [1.9.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.9.0) (2025-06-13)
+
+### Features
+
+* **deploy:** Added new inputs ([b53de9a](https://www.github.com/dgeorgievski/NetWebApi/commit/b53de9af6158e4577e20b489c25998e569b4ef0b))
+* **test:** Test deploy local runner call ([8cd2fd0](https://www.github.com/dgeorgievski/NetWebApi/commit/8cd2fd0cbe7fc00d2249044972f8cd3a5ad0f6d4))
+
+### Bug Fixes
+
+* **deploy:** fixed helm version param ([c8728ac](https://www.github.com/dgeorgievski/NetWebApi/commit/c8728ac48194f6bcecd8d60ad52484fb90cce0e3))
+* **deploy:** fixed workflow call ([adc5a5e](https://www.github.com/dgeorgievski/NetWebApi/commit/adc5a5e30c4a4e302f9ec7c39aae946c07870ec5))
+* **test:** Improved doc ([f1b0e30](https://www.github.com/dgeorgievski/NetWebApi/commit/f1b0e30195cd3bfdf9c7d3712475cff203384575))
+
 <a name="1.8.0"></a>
 ## [1.8.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.8.0) (2025-06-12)
 
