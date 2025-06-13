@@ -18,10 +18,10 @@ on:
         type: string
         default: 'ghcr.io'
       chart:
-        description: 'Chart name'
+        description: 'Chart path'
         required: false
         type: string
-        default: 'app'
+        default: 'deploy/helm/netwebapi'
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/test.yaml@composites
