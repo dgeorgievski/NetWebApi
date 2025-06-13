@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.10.0"></a>
+## [1.10.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.10.0) (2025-06-13)
+
+### Features
+
+* **app:** Added healthz api ([3dc9b07](https://www.github.com/dgeorgievski/NetWebApi/commit/3dc9b07f8a553cfc53bdb0ba19cdff1aed27046e))
+* **doc:** Added doc for API endpoint ([61211d4](https://www.github.com/dgeorgievski/NetWebApi/commit/61211d412ceeae2c563fe8bed347372ba087e654))
+
 <a name="1.9.0"></a>
 ## [1.9.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.9.0) (2025-06-13)
 
