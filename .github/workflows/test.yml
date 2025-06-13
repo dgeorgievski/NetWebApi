@@ -63,5 +63,5 @@ jobs:
       security-snyk: false
       registry: ${{ inputs.registry }}
       chart: ${{ inputs.chart }}
-      helm: ${{ inputs.helm-version }}
+      helm-version: ${{ inputs.helm-version }}
     secrets: inherit
