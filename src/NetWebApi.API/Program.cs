@@ -50,6 +50,9 @@ app.MapGet(
     )
     .WithName("GetWeatherForecast");
 
+app.MapGet("/", () => "Welcome to the NetWebApi API!");
+app.MapGet("/healthz", () => Results.Ok("Healthy"));
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

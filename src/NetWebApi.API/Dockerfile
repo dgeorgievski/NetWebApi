@@ -14,6 +14,7 @@ WORKDIR /App
 
 COPY --from=build /App/out .
 
+ENV ASPNETCORE_HTTP_PORTS=8080
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "NetWebApi.API.dll"]
