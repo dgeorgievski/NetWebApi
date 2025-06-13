@@ -33,6 +33,21 @@ on:
         required: false
         type: boolean
         default: false
+      registry:
+        description: 'Container registry'
+        required: false
+        type: string
+        default: 'ghcr.io'
+      chart:
+        description: 'Chart path'
+        required: false
+        type: string
+        default: 'deploy/helm/netwebapi'
+      helm-version:
+        description: 'Helm version'
+        required: false
+        type: string
+        default: 'helm3'
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/dev-csharp.yaml@composites
@@ -46,4 +61,7 @@ jobs:
       azure_webapp_package_path: 'src/NetWebApi.API'
       security-trivy: true
       security-snyk: false
+      registry: ${{ inputs.registry }}
+      chart: ${{ inputs.chart }}
+      helm: ${{ inputs.helm-version }}
     secrets: inherit
