@@ -48,6 +48,14 @@ on:
         required: false
         type: string
         default: 'helm3'
+      target:
+        description: "Deployment platform"
+        required: false
+        default: 'local-k8s'
+        type: choice 
+        options:
+          - 'local-k8s'
+          - 'azure-webapp-svc'
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/dev-csharp.yaml@composites
@@ -64,4 +72,5 @@ jobs:
       registry: ${{ inputs.registry }}
       chart: ${{ inputs.chart }}
       helm-version: ${{ inputs.helm-version }}
+      target: ${{ inputs.target }}
     secrets: inherit
