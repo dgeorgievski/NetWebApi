@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.11.0"></a>
+## [1.11.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.11.0) (2025-06-16)
+
+### Features
+
+* **deploY:** Using input var to define target ([f7ebf44](https://www.github.com/dgeorgievski/NetWebApi/commit/f7ebf44613998c9a5794e79316596de7b5ad9dac))
+
 <a name="1.10.0"></a>
 ## [1.10.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.10.0) (2025-06-13)
 
