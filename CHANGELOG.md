@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.12.0"></a>
+## [1.12.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.12.0) (2025-06-16)
+
+### Features
+
+* **deploy:** Using 2GB ram for Pod resource request ([b123661](https://www.github.com/dgeorgievski/NetWebApi/commit/b123661b478ba8a5dfc0a5ce6cdc9e5ec7056057))
+* **deploy:** Using 2GB ram for Pod resource request ([53a6e00](https://www.github.com/dgeorgievski/NetWebApi/commit/53a6e002a4ce67b90f185f01e2ebb9464d268f0f))
+
 <a name="1.11.0"></a>
 ## [1.11.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.11.0) (2025-06-16)
 
