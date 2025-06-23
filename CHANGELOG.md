@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.13.0"></a>
+## [1.13.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.13.0) (2025-06-23)
+
+### Features
+
+* **release:** Testing release job and action ([6ff8f44](https://www.github.com/dgeorgievski/NetWebApi/commit/6ff8f440915f5757301e0e8745b906947077a24b))
+
+### Bug Fixes
+
+* **build:** Fixed path to my-githu-actions ([a49527a](https://www.github.com/dgeorgievski/NetWebApi/commit/a49527afe876835debc196e58872c388799e5b1a))
+* **deplou:** Test 10 k8s local deploy ([d877f18](https://www.github.com/dgeorgievski/NetWebApi/commit/d877f18c0ff6ed6c8387b22b4b21c2b6d4ffa15d))
+* **deplou:** Test k8s local deploy ([5caef71](https://www.github.com/dgeorgievski/NetWebApi/commit/5caef71a6596727dcc4d8d380e10e01d5611917b))
+* **release:** Correct workflow name ([4dda371](https://www.github.com/dgeorgievski/NetWebApi/commit/4dda3716dc9229bd38c9ec64bba093429c63590c))
+* **release:** Correct workflow reference ([04f0f1c](https://www.github.com/dgeorgievski/NetWebApi/commit/04f0f1c9077f3fafc0ae235bb50591ad44c76059))
+* **test:** testing release inputs ([290b57f](https://www.github.com/dgeorgievski/NetWebApi/commit/290b57f495afd5037af151902424670a0e95f5b7))
+* **wf:** Split test CF into build and deploy ([680424d](https://www.github.com/dgeorgievski/NetWebApi/commit/680424d0db8dbd68db497d23c27c5d9b6d5c2458))
+
 <a name="1.12.1"></a>
 ## [1.12.1](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.12.1) (2025-06-17)
 
