@@ -58,7 +58,7 @@ on:
           - 'azure-webapp-svc'
 jobs:
   test:
-    uses: dgeorgievski/platform-github-actions/.github/workflows/dev-csharp.yaml@ddh-85
+    uses: dgeorgievski/platform-github-actions/.github/workflows/csharp-deploy.yml@ddh-85
     with:
       app-name: ${{ inputs.app-name }}
       language: ${{ inputs.language }}
