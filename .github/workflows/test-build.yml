@@ -51,4 +51,6 @@ jobs:
       security-trivy: true
       security-snyk: false
       registry: ${{ inputs.registry }}
+      docker-context: 'src/NetWebApi.API'
+      docker-file: 'src/NetWebApi.API/Dockerfile'
     secrets: inherit
