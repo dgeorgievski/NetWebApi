@@ -40,7 +40,7 @@ on:
         default: 'ghcr.io'
 jobs:
   test:
-    uses: dgeorgievski/platform-github-actions/.github/workflows/csharp-build.yml@ddh-85
+    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@ddh-85
     with:
       app-name: ${{ inputs.app-name }}
       language: ${{ inputs.language }}
