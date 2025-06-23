@@ -24,7 +24,7 @@ on:
         default: 'deploy/helm/netwebapi'
 jobs:
   test:
-    uses: dgeorgievski/my-github-actions/.github/workflows/test.yaml@composites
+    uses: dgeorgievski/platform-github-actions/.github/workflows/test.yaml@ddh-85
     with:
       app-name: ${{ inputs.app-name }}
       app-version: ${{ inputs.app-version }}
