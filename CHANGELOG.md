@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.13.3"></a>
+## [1.13.3](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.13.3) (2025-06-23)
+
+### Bug Fixes
+
+* **pacakge:** Set dokcer inuts ([e0fde04](https://www.github.com/dgeorgievski/NetWebApi/commit/e0fde04b49a7fcbdc287ac45e506305069d9796c))
+
 <a name="1.13.2"></a>
 ## [1.13.2](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.13.2) (2025-06-23)
 
