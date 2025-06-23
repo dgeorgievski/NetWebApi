@@ -3,36 +3,26 @@ name: Test Deploy Workflow
 on:
   workflow_dispatch:
     inputs:
-      language:
-        description: 'Programming language'
-        required: true
-        default: 'csharp'
-        type: string
-      app-name:
-        description: 'Application name'
+      image-name:
+        description: 'Image name'
         default: 'netwebapi'
         required: true
         type: string
-      dotnet-version:
-        description: 'Dotnet version'
-        required: false
+      image-tag:
+        description: 'Image tag'
+        default: 'latest'
+        required: true
         type: string
-        default: '9.0.300'
-      dotnet-tools-restore:
-        description: 'Restore tools. If unchecked, install tools globally.'
-        required: false
-        type: boolean
-        default: true
-      dotnet-linter-csharpier:
-        description: 'Lint with csharpier'
-        required: false
-        type: boolean
-        default: true
-      dotnet-linter-roslynator:
-        description: 'Lint with roslynator'
-        required: false
-        type: boolean
-        default: false
+      namespace:
+        description: 'Kubernetes namespace'
+        default: 'netwebapi'
+        required: true
+        type: string
+      release-name:
+        description: 'Helm release name'
+        default: 'netwebapi'
+        required: true
+        type: string
       registry:
         description: 'Container registry'
         required: false
@@ -61,8 +51,12 @@ jobs:
     uses: dgeorgievski/platform-github-actions/.github/workflows/csharp-deploy.yml@ddh-85
     with:
       # TODO complete inputs vars.
+      image-name: ${{ inputs.image-name }}
+      image-tag: ${{ inputs.image-tag }}
+      namespace: ${{ inputs.namespace }}
       registry: ${{ inputs.registry }}
       chart: ${{ inputs.chart }}
+      release-name: ${{ inputs.release-name }}
       helm-version: ${{ inputs.helm-version }}
       target: ${{ inputs.target }}
     secrets: inherit
