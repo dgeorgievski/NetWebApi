@@ -1,4 +1,4 @@
-name: Test Composite Actions
+name: Test Build Workflow
 
 on:
   workflow_dispatch:
@@ -38,24 +38,6 @@ on:
         required: false
         type: string
         default: 'ghcr.io'
-      chart:
-        description: 'Chart path'
-        required: false
-        type: string
-        default: 'deploy/helm/netwebapi'
-      helm-version:
-        description: 'Helm version'
-        required: false
-        type: string
-        default: 'helm3'
-      target:
-        description: "Deployment platform"
-        required: false
-        default: 'local-k8s'
-        type: choice 
-        options:
-          - 'local-k8s'
-          - 'azure-webapp-svc'
 jobs:
   test:
     uses: dgeorgievski/platform-github-actions/.github/workflows/csharp-build.yml@ddh-85
@@ -66,11 +48,7 @@ jobs:
       dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
       dotnet-linter-csharpier: true
       dotnet-linter-roslynator: false
-      azure_webapp_package_path: 'src/NetWebApi.API'
       security-trivy: true
       security-snyk: false
       registry: ${{ inputs.registry }}
-      chart: ${{ inputs.chart }}
-      helm-version: ${{ inputs.helm-version }}
-      target: ${{ inputs.target }}
     secrets: inherit

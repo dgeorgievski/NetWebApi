@@ -1,17 +1,38 @@
-name: Test Deploy
+name: Test Deploy Workflow
 
 on:
   workflow_dispatch:
     inputs:
+      language:
+        description: 'Programming language'
+        required: true
+        default: 'csharp'
+        type: string
       app-name:
         description: 'Application name'
         default: 'netwebapi'
         required: true
         type: string
-      app-version:
-        description: 'App version'
-        required: true
+      dotnet-version:
+        description: 'Dotnet version'
+        required: false
         type: string
+        default: '9.0.300'
+      dotnet-tools-restore:
+        description: 'Restore tools. If unchecked, install tools globally.'
+        required: false
+        type: boolean
+        default: true
+      dotnet-linter-csharpier:
+        description: 'Lint with csharpier'
+        required: false
+        type: boolean
+        default: true
+      dotnet-linter-roslynator:
+        description: 'Lint with roslynator'
+        required: false
+        type: boolean
+        default: false
       registry:
         description: 'Container registry'
         required: false
@@ -22,13 +43,26 @@ on:
         required: false
         type: string
         default: 'deploy/helm/netwebapi'
+      helm-version:
+        description: 'Helm version'
+        required: false
+        type: string
+        default: 'helm3'
+      target:
+        description: "Deployment platform"
+        required: false
+        default: 'local-k8s'
+        type: choice 
+        options:
+          - 'local-k8s'
+          - 'azure-webapp-svc'
 jobs:
   test:
-    uses: dgeorgievski/platform-github-actions/.github/workflows/test.yaml@ddh-85
+    uses: dgeorgievski/platform-github-actions/.github/workflows/csharp-deploy.yml@ddh-85
     with:
-      app-name: ${{ inputs.app-name }}
-      app-version: ${{ inputs.app-version }}
+      # TODO complete inputs vars.
       registry: ${{ inputs.registry }}
       chart: ${{ inputs.chart }}
-      
+      helm-version: ${{ inputs.helm-version }}
+      target: ${{ inputs.target }}
     secrets: inherit
