@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.14.0"></a>
+## [1.14.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.14.0) (2025-06-30)
+
+### Features
+
+* **ci:** Switched to v0 reference ([48982fe](https://www.github.com/dgeorgievski/NetWebApi/commit/48982fe98d3a8afbc20ef036f74b97a820034ec8))
+* **deploy:** Test deployment WF ([b0d8b77](https://www.github.com/dgeorgievski/NetWebApi/commit/b0d8b77b0bd91946a4b1017450681c65e09a9fd0))
+
+### Bug Fixes
+
+* WF references in build ci ([fadb7e9](https://www.github.com/dgeorgievski/NetWebApi/commit/fadb7e972b5336607c55c8e4df3316e0801a3c57))
+* **ci:** test build [#15](https://www.github.com/dgeorgievski/NetWebApi/issues/15) ([77fab8d](https://www.github.com/dgeorgievski/NetWebApi/commit/77fab8d582201a3a38c2d9c1d8d5601ac631dd4b))
+* **deploy:** path to workflow ([3c3fb14](https://www.github.com/dgeorgievski/NetWebApi/commit/3c3fb148ecea099f1b0e2cf176fb25e595c0f30c))
+
 <a name="1.13.3"></a>
 ## [1.13.3](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.13.3) (2025-06-23)
 
