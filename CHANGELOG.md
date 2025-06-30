@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.14.3"></a>
+## [1.14.3](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.14.3) (2025-06-30)
+
+### Bug Fixes
+
+* **dotnet:** [#18](https://www.github.com/dgeorgievski/NetWebApi/issues/18) ([2df329d](https://www.github.com/dgeorgievski/NetWebApi/commit/2df329d36cb8a63676e763b989c724278e17cd87))
+
 <a name="1.14.2"></a>
 ## [1.14.2](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.14.2) (2025-06-30)
 
