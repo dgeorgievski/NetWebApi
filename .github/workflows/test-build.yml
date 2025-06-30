@@ -18,6 +18,11 @@ on:
         required: false
         type: string
         default: '9.0.300'
+      working-directory:
+        description: 'Working directory for the .NET application. Default "."; can be set to a custom path.'
+        required: false
+        type: string
+        default: 'src/NetWebApi.API'
       dotnet-tools-restore:
         description: 'Restore tools. If unchecked, install tools globally.'
         required: false
@@ -28,16 +33,22 @@ on:
         required: false
         type: boolean
         default: true
-      dotnet-linter-roslynator:
-        description: 'Lint with roslynator'
-        required: false
-        type: boolean
-        default: false
       registry:
         description: 'Container registry'
         required: false
         type: string
         default: 'ghcr.io'
+      docker-context:
+        description: 'Context for Docker build. Default "."'
+        required: false
+        type: string
+        default: 'src/NetWebApi.API'
+      docker-file:
+        description: 'Dockerfile path. Default ./Dockerfile; can be set to a custom Dockerfile path'
+        required: false
+        type: string
+        default: 'src/NetWebApi.API/Dockerfile'
+
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@v0
