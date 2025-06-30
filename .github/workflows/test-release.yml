@@ -1,4 +1,4 @@
-name: Test Release Workflow
+name: Test Build Workflow
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
         description: 'Dotnet version'
         required: false
         type: string
-        default: '9.0.300
+        default: '9.0.300'
 
 jobs:
   test:
