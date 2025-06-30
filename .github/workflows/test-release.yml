@@ -12,6 +12,7 @@ on:
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/csharp-release.yml@test-cs
+    if: github.ref == 'refs/heads/main'
     with:
       dotnet-version: ${{ inputs.dotnet-version }}
     secrets: inherit
