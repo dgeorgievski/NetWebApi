@@ -51,7 +51,7 @@ on:
 
 jobs:
   test:
-    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@v0
+    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@test-cs
     with:
       app-name: ${{ inputs.app-name }}
       language: ${{ inputs.language }}
