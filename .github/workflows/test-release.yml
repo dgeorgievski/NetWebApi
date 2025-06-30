@@ -1,0 +1,17 @@
+name: Test Release Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      dotnet-version:
+        description: 'Dotnet version'
+        required: false
+        type: string
+        default: '9.0.300
+
+jobs:
+  test:
+    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-release.yml@test-cs
+    with:
+      dotnet-version: ${{ inputs.dotnet-version }}
+    secrets: inherit
