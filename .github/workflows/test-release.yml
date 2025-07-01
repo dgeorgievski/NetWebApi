@@ -27,12 +27,12 @@ on:
         description: 'Context for Docker build. Default "."'
         required: false
         type: string
-        default: '.'
+        default: 'src/NetWebApi.API'
       docker-file:
         description: 'Dockerfile path. Default ./Dockerfile; can be set to a custom Dockerfile path'
         required: false
         type: string
-        default: './Dockerfile'
+        default: 'src/NetWebApi.API/Dockerfile'
       docker-push:
         description: 'Push the Docker image to the registry. Default true'
         required: false
