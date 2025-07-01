@@ -70,7 +70,7 @@ on:
 
 jobs:
   test:
-    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-test.yml@test-cs
+    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build-short.yml@test-cs
     with:
       app-name: ${{ inputs.app-name || 'netwebapi'}} 
       language: ${{ inputs.language || 'csharp'}} 

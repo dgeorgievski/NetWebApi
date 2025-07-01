@@ -48,9 +48,8 @@ on:
           - 'azure-webapp-svc'
 jobs:
   test:
-    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-deploy.yml@ddh-85
+    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-deploy.yml@test-cs
     with:
-      # TODO complete inputs vars.
       image-name: ${{ inputs.image-name }}
       image-tag: ${{ inputs.image-tag }}
       namespace: ${{ inputs.namespace }}
