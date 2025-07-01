@@ -3,16 +3,57 @@ name: Test Release Workflow
 on:
   workflow_dispatch:
     inputs:
+      app-name:
+        description: 'Name of the .NET '
+        required: true
+        type: string
+      language:
+        description: '.Net programming language used in the application. Default csharp; can be csharp or fsharp.'
+        required: false
+        type: string
+        default: 'csharp'
       dotnet-version:
-        description: 'Dotnet version'
+        description: 'Version of .NET SDK to use. Default 9.0.300; can be any valid .NET SDK version.'
         required: false
         type: string
         default: '9.0.300'
+      registry:
+        description: 'Container registry to push the image to. Default ghcr.io.'
+        required: false
+        type: string
+        default: 'ghcr.io'
+      docker-context:
+        description: 'Context for Docker build. Default "."'
+        required: false
+        type: string
+        default: '.'
+      docker-file:
+        description: 'Dockerfile path. Default ./Dockerfile; can be set to a custom Dockerfile path'
+        required: false
+        type: string
+        default: './Dockerfile'
+      docker-push:
+        description: 'Push the Docker image to the registry. Default true'
+        required: false
+        type: boolean
+        default: true
+      run-trivy:
+        description: 'Run Trivy Scan'
+        required: false
+        default: true
+        type: boolean
 
 jobs:
   test:
     uses: dgeorgievski/my-github-actions/.github/workflows/csharp-release.yml@test-cs
     if: github.ref == 'refs/heads/main'
     with:
+      app-name: ${{ inputs.app-name }}
+      language: ${{ inputs.language }}
       dotnet-version: ${{ inputs.dotnet-version }}
+      registry: ${{ inputs.registry }}
+      docker-context: ${{ inputs.docker-context }}
+      docker-file: ${{ inputs.docker-file }}
+      docker-push: ${{ inputs.docker-push }}
+      run-trivy: ${{ inputs.run-trivy }}      
     secrets: inherit
