@@ -1,6 +1,25 @@
 name: Test Build Workflow
 
 on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'fix/**'
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+      - 'docs/**'
+      - 'CHANGELOG.md'
+      - 'LICENSE'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - closed # Trigger when a pull request is closed (including merged)
+    branches:
+      - main
+    
   workflow_dispatch:
     inputs:
       language:
@@ -54,7 +73,7 @@ jobs:
     # uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@test-cs
     uses: dgeorgievski/my-github-actions/.github/workflows/csharp-test.yml@test-cs
     with:
-      app-name: ${{ inputs.app-name }}
+      app-name: ${{ inputs.app-name }} 
       language: ${{ inputs.language }}
       dotnet-version: ${{ inputs.dotnet-version }}
       dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
@@ -63,6 +82,6 @@ jobs:
       security-trivy: true
       security-snyk: false
       registry: ${{ inputs.registry }}
-      docker-context: 'src/NetWebApi.API'
-      docker-file: 'src/NetWebApi.API/Dockerfile'
+      docker-context: ${{ inputs.docker-context }}
+      docker-file: ${{ inputs.docker-file }}
     secrets: inherit
