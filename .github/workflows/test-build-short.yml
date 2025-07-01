@@ -1,25 +1,24 @@
 name: Test Build Short Workflow
 
 on:
-  push:
-    branches:
-      - 'main'
-      - 'feature/**'
-      - 'fix/**'
-    paths-ignore:
-      - '.github/workflows/**'
-      - 'README.md'
-      - 'docs/**'
-      - 'CHANGELOG.md'
-      - 'LICENSE'
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - edited
-      # - closed # Trigger when a pull request is closed (including merged)
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - 'main'
+  #     - 'feature/**'
+  #     - 'fix/**'
+  #   paths-ignore:
+  #     - '.github/workflows/**'
+  #     - 'README.md'
+  #     - 'docs/**'
+  #     - 'CHANGELOG.md'
+  #     - 'LICENSE'
+  # pull_request:
+  #   types:
+  #     - opened
+  #     - reopened
+  #     - edited
+  #   branches:
+  #     - main
     
   workflow_dispatch:
     inputs:
