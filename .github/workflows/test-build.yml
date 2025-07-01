@@ -1,6 +1,25 @@
 name: Test Build Workflow
 
 on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'fix/**'
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+      - 'docs/**'
+      - 'CHANGELOG.md'
+      - 'LICENSE'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - closed # Trigger when a pull request is closed (including merged)
+    branches:
+      - main
+    
   workflow_dispatch:
     inputs:
       language:
