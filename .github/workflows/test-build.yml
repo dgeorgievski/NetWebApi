@@ -54,15 +54,15 @@ jobs:
     # uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@test-cs
     uses: dgeorgievski/my-github-actions/.github/workflows/csharp-test.yml@test-cs
     with:
-      app-name: ${{ inputs.app-name }}
-      language: ${{ inputs.language }}
-      dotnet-version: ${{ inputs.dotnet-version }}
-      dotnet-tools-restore: ${{ inputs.dotnet-tools-restore }}
+      app-name: ${{ inputs.app-name || 'netwebapi'}} 
+      language: ${{ inputs.language || 'csharp'}} 
+      dotnet-version: ${{ inputs.dotnet-version || '9.0.300' }}
+      dotnet-tools-restore: ${{ inputs.dotnet-tools-restore || true }}
       dotnet-linter-csharpier: true
       dotnet-linter-roslynator: false
       security-trivy: true
       security-snyk: false
-      registry: ${{ inputs.registry }}
-      docker-context: 'src/NetWebApi.API'
-      docker-file: 'src/NetWebApi.API/Dockerfile'
+      registry: ${{ inputs.registry || 'ghcr.io' }}
+      docker-context: ${{ inputs.docker-context || 'src/NetWebApi.API' }}
+      docker-file: ${{ inputs.docker-file || 'src/NetWebApi.API/Dockerfile' }}
     secrets: inherit
