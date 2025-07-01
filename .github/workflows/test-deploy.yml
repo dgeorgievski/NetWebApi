@@ -5,7 +5,7 @@ on:
     inputs:
       image-name:
         description: 'Image name'
-        default: 'netwebapi'
+        default: 'dgeorgievski/netwebapi'
         required: true
         type: string
       image-tag:
