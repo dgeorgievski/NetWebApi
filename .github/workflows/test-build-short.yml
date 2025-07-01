@@ -1,24 +1,25 @@
-name: Test Build Workflow
+name: Test Build Short Workflow
 
 on:
-  # push:
-  #   branches:
-  #     - 'feature/**'
-  #     - 'fix/**'
-  #   paths-ignore:
-  #     - '.github/workflows/**'
-  #     - 'README.md'
-  #     - 'docs/**'
-  #     - 'CHANGELOG.md'
-  #     - 'LICENSE'
-  # pull_request:
-  #   types:
-  #     - opened
-  #     - reopened
-  #     - edited
-  #     - closed # Trigger when a pull request is closed (including merged)
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - 'main'
+      - 'feature/**'
+      - 'fix/**'
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+      - 'docs/**'
+      - 'CHANGELOG.md'
+      - 'LICENSE'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      # - closed # Trigger when a pull request is closed (including merged)
+    branches:
+      - main
     
   workflow_dispatch:
     inputs:
@@ -70,7 +71,7 @@ on:
 
 jobs:
   test:
-    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-build.yml@test-cs
+    uses: dgeorgievski/my-github-actions/.github/workflows/csharp-test.yml@test-cs
     with:
       app-name: ${{ inputs.app-name || 'netwebapi'}} 
       language: ${{ inputs.language || 'csharp'}} 
