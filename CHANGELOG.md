@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.16.0"></a>
+## [1.16.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.16.0) (2025-07-01)
+
+### Features
+
+* change [#2](https://www.github.com/dgeorgievski/NetWebApi/issues/2) ([#3](https://www.github.com/dgeorgievski/NetWebApi/issues/3)) ([248ef5d](https://www.github.com/dgeorgievski/NetWebApi/commit/248ef5dd9564a93aee3171e63b84620a4ea319d2))
+* git release ([5406284](https://www.github.com/dgeorgievski/NetWebApi/commit/5406284907457cccef621442257f48fc36a2691e))
+* refactored CF ([9ed7a8b](https://www.github.com/dgeorgievski/NetWebApi/commit/9ed7a8bb92c74b924ec59b6ba8d71012d8829109))
+* test feat push ([0399d63](https://www.github.com/dgeorgievski/NetWebApi/commit/0399d631ac11d8639d9eafe32fd6eba3b815487c))
+* use short build ([4ac0fcd](https://www.github.com/dgeorgievski/NetWebApi/commit/4ac0fcd6ee8c1041da2c1b99184e5c23128f10e5))
+
+### Bug Fixes
+
+* change [#3](https://www.github.com/dgeorgievski/NetWebApi/issues/3) ([#4](https://www.github.com/dgeorgievski/NetWebApi/issues/4)) ([270a33c](https://www.github.com/dgeorgievski/NetWebApi/commit/270a33cb51b064676c642d6c6998b60dbe77e2b1))
+* default app-name ([a535e65](https://www.github.com/dgeorgievski/NetWebApi/commit/a535e65b79298ca35176f5c91f5ca613f69c1f55))
+* default docker file and context ([7c8a5ab](https://www.github.com/dgeorgievski/NetWebApi/commit/7c8a5ab2f9d97a8b4b650b041490d9322e461d8c))
+* defaults ([1169f46](https://www.github.com/dgeorgievski/NetWebApi/commit/1169f464130f65011467601121d112885d28cb4b))
+* dotnet release ([def08a2](https://www.github.com/dgeorgievski/NetWebApi/commit/def08a2f6e8dd3c6699ec41cbfe0ff21c3b83f3f))
+
 <a name="1.15.0"></a>
 ## [1.15.0](https://www.github.com/dgeorgievski/NetWebApi/releases/tag/v1.15.0) (2025-06-30)
 
